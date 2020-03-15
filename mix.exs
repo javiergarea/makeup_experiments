@@ -7,7 +7,9 @@ defmodule MakeupMarkdown.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
-      deps: deps()
+      deps: deps(),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [coveralls: :test]
     ]
   end
 
@@ -26,8 +28,9 @@ defmodule MakeupMarkdown.MixProject do
   defp deps do
     [
       {:makeup, "~> 1.0"},
+      {:stream_data, "~> 0.1", only: :test},
       {:credo, "~> 1.3", only: [:dev, :test], runtime: false},
-      {:stream_data, "~> 0.1", only: :test}
+      {:excoveralls, "~> 0.10", only: :test}
     ]
   end
 end
