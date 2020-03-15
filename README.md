@@ -3,22 +3,16 @@
 [![Build Status](https://travis-ci.com/javiergarea/makeup_markdown.svg?branch=master)](https://travis-ci.com/javiergarea/makeup_markdown/settings)
 [![Coverage Status](https://coveralls.io/repos/github/javiergarea/makeup_markdown/badge.svg?branch=master)](https://coveralls.io/github/javiergarea/makeup_markdown?branch=master)
 
-**TODO: Add description**
+A [Makeup](https://github.com/tmbb/makeup/) lexer for Markdown.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `makeup_markdown` to your list of dependencies in `mix.exs`:
+Add `makeup_markdown` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:makeup_markdown, "~> 0.1.0"}
+    {:makeup_elixir, git: "git://github.com/javiergarea/makeup_markdown.git"}
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/makeup_markdown](https://hexdocs.pm/makeup_markdown).
-

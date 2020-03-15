@@ -10,4 +10,4 @@ script:
     - mix credo
 
 after_success:
-  - mix coveralls.travis
+    - mix coveralls.travis
