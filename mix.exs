@@ -7,9 +7,7 @@ defmodule MakeupMarkdown.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
-      deps: deps(),
-      test_coverage: [tool: ExCoveralls],
-      preferred_cli_env: [coveralls: :test]
+      deps: deps()
     ]
   end
 
@@ -19,7 +17,6 @@ defmodule MakeupMarkdown.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      applications: [:logger],
       extra_applications: [:stream_data]
     ]
   end
@@ -28,9 +25,7 @@ defmodule MakeupMarkdown.MixProject do
   defp deps do
     [
       {:makeup, "~> 1.0"},
-      {:stream_data, "~> 0.1", only: :test},
-      {:credo, "~> 1.3", only: [:dev, :test], runtime: false},
-      {:excoveralls, "~> 0.10", only: :test}
+      {:stream_data, "~> 0.1", only: :test}
     ]
   end
 end
