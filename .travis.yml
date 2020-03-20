@@ -7,7 +7,4 @@ env: MIX_ENV=test
 
 script: 
     - mix test
-    - mix credo
-
-after_success:
-    - mix coveralls.travis
+    - mix format --check-formatted
