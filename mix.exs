@@ -1,6 +1,9 @@
 defmodule MakeupMarkdown.MixProject do
   use Mix.Project
 
+  @version "1.0.0"
+  @url "https://github.com/javiergarea/makeup_markdown"
+
   def project do
     [
       app: :makeup_markdown,
