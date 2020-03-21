@@ -181,7 +181,7 @@ defmodule Releaser do
     # Set a new version on the mix.exs file
     VersionUtils.set_version(new_version)
     # Commit the changes and ad a new 'v*.*.*' tag
-    Git.add_commit_and_tag(new_version)
+    #Git.add_commit_and_tag(new_version)
     # Now that we have commited the changes, we can remove the release file
     Changelog.remove_release_file()
     # Try to publish the package on hex.
