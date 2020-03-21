@@ -167,9 +167,6 @@ defmodule Releaser do
   #alias Releaser.Publish
 
   def run() do
-    # Run the tests before generating the release.
-    # If any test fails, stop.
-    Tests.run_tests!()
     # Get the current version from the mix.exs file.
     version = VersionUtils.get_version()
     # Extract the changelog entry and add it to the changelog.
