@@ -24,6 +24,10 @@ jobs:
           mix deps.get
           npm install -g semantic-release@15
           npm install @semantic-release/exec -D
+      - name: Run Tests
+        run: mix deps.get
+      - name: Check format
+        run: mix format --check-formatted
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
