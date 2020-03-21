@@ -5,7 +5,7 @@
     "@semantic-release/github",
     ["@semantic-release/exec", {
       "verifyConditionsCmd": "mix test",
-      "publishCmd" : "mix release"
+      "publishCmd" : "mix hex.publish"
       }]
   ]
 }
