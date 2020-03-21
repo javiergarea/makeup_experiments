@@ -164,7 +164,7 @@ defmodule Releaser do
   alias Releaser.Changelog
   alias Releaser.Git
   alias Releaser.Tests
-  alias Releaser.Publish
+  #alias Releaser.Publish
 
   def run() do
     # Run the tests before generating the release.
