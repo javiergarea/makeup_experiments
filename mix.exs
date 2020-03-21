@@ -43,8 +43,8 @@ defmodule MakeupMarkdown.MixProject do
   def version do
     # get git version
     {git_desc, 0} = System.cmd("git", ~w[describe --tags])
-    ["v" <> major_minor, patch, _git_commit_id] = git_desc |> String.trim |> String.split("-")
-    "#{major_minor}.#{patch}"
+    ["v" <> major_minor, _patch, _git_commit_id] = git_desc |> String.trim() |> String.split("-")
+    major_minor
   end
 
   defp build_docs(_) do
