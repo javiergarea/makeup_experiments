@@ -1,1 +1,1 @@
-RELEASE_TYPE: initial
+RELEASE_TYPE: minor
