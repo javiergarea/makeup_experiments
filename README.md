@@ -1,6 +1,6 @@
 # MakeupMarkdown
 
-[![Build Status](https://travis-ci.com/javiergarea/makeup_markdown.svg?branch=master)](https://travis-ci.com/javiergarea/makeup_markdown/settings)
+![Release](https://github.com/javiergarea/makeup_markdown/workflows/Release/badge.svg)
 
 A [Makeup](https://github.com/tmbb/makeup/) lexer for Markdown.
 
