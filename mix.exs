@@ -17,7 +17,6 @@ defmodule MakeupMarkdown.MixProject do
 
   defp aliases do
     [
-      docs: &build_docs/1,
       release: "run scripts/release.exs"
     ]
   end
