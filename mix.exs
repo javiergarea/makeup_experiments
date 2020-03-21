@@ -1,13 +1,13 @@
 defmodule MakeupMarkdown.MixProject do
   use Mix.Project
 
-  @version "1.0.0"
+  @version "1.1.1"
   @url "https://github.com/javiergarea/makeup_markdown"
 
   def project do
     [
       app: :makeup_markdown,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
       deps: deps(),
