@@ -10,15 +10,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
       - name: Setup elixir
         uses: actions/setup-elixir@v1
         with:
           elixir-version: 1.9.4 # Define the elixir version [required]
           otp-version: 22.2 # Define the OTP version [required]
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
       - name: Install dependencies
         run: |
           mix deps.get
