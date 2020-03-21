@@ -7,12 +7,20 @@ defmodule MakeupMarkdown.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
-      deps: deps()
+      deps: deps(),
+      aliases: aliases()
     ]
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
+
+  defp aliases do
+    [
+      docs: &build_docs/1,
+      release: "run scripts/release.exs"
+    ]
+  end
 
   # Run "mix help compile.app" to learn about applications.
   def application do
