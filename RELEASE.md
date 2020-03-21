@@ -1,1 +1,1 @@
-RELEASE_TYPE: major
+RELEASE_TYPE: initial

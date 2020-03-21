@@ -8,7 +8,7 @@ defmodule MakeupMarkdown.MixProject do
     [
       app: :makeup_markdown,
       version: @version,
-      elixir: "~> 1.10",
+      elixir: "~> 1.10.2",
       elixirc_paths: elixirc_paths(Mix.env()),
       deps: deps(),
       aliases: aliases()
