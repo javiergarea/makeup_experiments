@@ -27,8 +27,7 @@ defmodule MakeupMarkdown.MixProject do
 
   defp aliases do
     [
-      docs: &build_docs/1,
-      bump_version: "run scripts/bump_version.exs"
+      docs: &build_docs/1
     ]
   end
 
@@ -43,7 +42,7 @@ defmodule MakeupMarkdown.MixProject do
   # Based on https://github.com/goodcodein/goodcode.in/blob/master/elixir/a-simple-way-to-automatically-set-the-semantic-version-of-your-elixir-app.md
   def version do
     # get git version
-    {git_desc, 0} = System.cmd("git", ~w[describe --tags])
+    {git_desc, 0} = System.cmd("git", ~w[describe --always --tags])
     ["v" <> major_minor, _patch, _git_commit_id] = git_desc |> String.trim() |> String.split("-")
     major_minor
   end
