@@ -29,7 +29,7 @@ defmodule MakeupMarkdown.MixProject do
   defp aliases do
     [
       docs: &build_docs/1,
-      set_version: "run scripts/set_version.exs"
+      "version.set": "run scripts/set_version.exs"
     ]
   end
 
