@@ -27,7 +27,6 @@ defmodule MakeupMarkdown.MixProject do
 
   defp aliases do
     [
-      docs: &build_docs/1,
       "version.set": "run scripts/set_version.exs"
     ]
   end
@@ -50,19 +49,5 @@ defmodule MakeupMarkdown.MixProject do
       [_line, version] -> version
       _ -> "1.0.0"
     end
-  end
-
-  defp build_docs(_) do
-    Mix.Task.run("compile")
-    ex_doc = Path.join(Mix.path_for(:escripts), "ex_doc")
-
-    unless File.exists?(ex_doc) do
-      raise "cannot build docs because escript for ex_doc is not installed"
-    end
-
-    args = ["Makeup", get_version(), Mix.Project.compile_path()]
-    opts = ~w[--main Makeup --source-ref v#{get_version()} --source-url #{@url}]
-    System.cmd(ex_doc, args ++ opts)
-    Mix.shell().info("Docs built successfully")
   end
 end
