@@ -1,8 +1,8 @@
 defmodule VersionHandler do
    # Based on https://github.com/goodcodein/goodcode.in/blob/master/elixir/a-simple-way-to-automatically-set-the-semantic-version-of-your-elixir-app.md
     def get_version do
-        {git_desc, 0} = System.cmd("/usr/bin/git", ~w[describe --always --tags])
-        ["v" <> major_minor, _patch, _git_commit_id] = git_desc |> String.trim() |> String.split("-")
+        {git_desc, 0} = System.cmd("git", ~w[describe --always --tags])
+        "v" <> major_minor = git_desc |> String.replace("\n","")
         major_minor
     end
 
