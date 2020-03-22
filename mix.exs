@@ -41,14 +41,14 @@ defmodule MakeupMarkdown.MixProject do
   end
 
   # Based on https://github.com/goodcodein/goodcode.in/blob/master/elixir/a-simple-way-to-automatically-set-the-semantic-version-of-your-elixir-app.md
+  # and https://github.com/tmbb/makeup/blob/master/scripts/release.exs
+  @version_regex ~r/v(\d+\.\d+\.\d+)/
   defp get_version do
-    case System.cmd("git", ~w[describe --always --tags]) do
-      {git_desc, 0} ->
-        "v" <> major_minor = git_desc |> String.replace("\n", "")
-        major_minor
+    {git_desc, 0} = System.cmd("git", ~w[describe --always --tags])
 
-      _ ->
-        "1.0.0"
+    case Regex.run(@version_regex, git_desc) do
+      [_line, version] -> version
+      _ -> "1.0.0"
     end
   end
 
